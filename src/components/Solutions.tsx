@@ -5,44 +5,26 @@ import { Card, CardContent, CardFooter } from "@/components/ui/card";
 const Solutions = () => {
   const solutionCategories = [
     {
-      title: "SAAS Products",
-      description: "Our cloud-based software solutions deliver powerful functionality with the flexibility of software-as-a-service.",
+      title: "Our Products",
+      description: "We specialize in developing innovative SAAS solutions for various industries.",
       solutions: [
         {
-          title: "Enterprise Resource Planning",
-          description: "Comprehensive ERP solution that integrates all facets of business operations on a single platform.",
-          features: ["Modular architecture", "Real-time analytics", "Multi-device support"]
+          title: "MakeoverBD",
+          description: "A comprehensive SAAS solution focusing on automation, client and appointment management for the beauty industry.",
+          features: ["Salon management", "Appointment scheduling", "Client records", "Automated reminders"],
+          website: "makeoverbd.com"
         },
         {
-          title: "Customer Relationship Management",
-          description: "Advanced CRM system that optimizes customer interactions and streamlines sales processes.",
-          features: ["Lead management", "360° customer view", "Automation tools"]
+          title: "ParlorKoi",
+          description: "A marketplace platform that lists all beauty salons and spas in your neighborhood, with one-click listing for MakeoverBD customers.",
+          features: ["Salon discovery", "Integrated listings", "Customer reviews", "Booking platform"],
+          website: "parlorkoi.com"
         },
         {
-          title: "Business Intelligence Platform",
-          description: "Data visualization and analytics platform that transforms raw data into actionable insights.",
-          features: ["Interactive dashboards", "Predictive analytics", "Custom reporting"]
-        }
-      ]
-    },
-    {
-      title: "Hardware Solutions",
-      description: "Cutting-edge hardware products designed for performance, reliability, and seamless integration.",
-      solutions: [
-        {
-          title: "IoT Sensor Networks",
-          description: "Connected sensor systems for industrial monitoring, environmental tracking, and smart infrastructure.",
-          features: ["Low power consumption", "Wireless connectivity", "Cloud integration"]
-        },
-        {
-          title: "Edge Computing Devices",
-          description: "Powerful edge computing hardware for processing data closer to the source.",
-          features: ["Distributed architecture", "Real-time processing", "Secure communications"]
-        },
-        {
-          title: "Custom Hardware Development",
-          description: "Bespoke hardware solutions tailored to specific business requirements and use cases.",
-          features: ["Requirements analysis", "Prototype development", "Manufacturing support"]
+          title: "DoctorHub",
+          description: "A specialized SAAS solution tailored to patient history management for doctors and medical practitioners.",
+          features: ["Patient records", "Medical history tracking", "Appointment management", "Digital prescriptions"],
+          website: "Coming soon"
         }
       ]
     }
@@ -54,7 +36,7 @@ const Solutions = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-company-dark">Our Solutions</h2>
           <p className="text-company-gray text-lg max-w-3xl mx-auto">
-            Comprehensive suite of software and hardware solutions designed to address complex business challenges.
+            Comprehensive suite of software solutions designed to transform businesses in healthcare and beauty sectors.
           </p>
         </div>
 
@@ -82,6 +64,9 @@ const Solutions = () => {
                           </li>
                         ))}
                       </ul>
+                      <div className="mt-3 text-sm text-company-blue">
+                        {solution.website}
+                      </div>
                     </CardContent>
                     <CardFooter>
                       <Button variant="outline" className="w-full border-company-blue text-company-blue hover:bg-company-blue/10">

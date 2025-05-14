@@ -44,7 +44,7 @@ const Contact = () => {
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-company-dark">Contact Us</h2>
           <p className="text-company-gray text-lg max-w-3xl mx-auto">
-            Get in touch with our team to discuss how we can help with your software and hardware needs.
+            Get in touch with our team to discuss how we can help with your software needs.
           </p>
         </div>
 
@@ -115,9 +115,9 @@ const Contact = () => {
             <div className="mb-8">
               <h3 className="text-xl font-semibold mb-4 text-company-dark">Our Office</h3>
               <address className="not-italic text-company-gray">
-                <p className="mb-2">123 Tech Park Avenue</p>
-                <p className="mb-2">Suite 456</p>
-                <p className="mb-2">Innovation City, IC 12345</p>
+                <p className="mb-2">29/6 Babar Road, Block-B</p>
+                <p className="mb-2">Mohammadpur</p>
+                <p className="mb-2">Dhaka-1207, Bangladesh</p>
               </address>
             </div>
 
@@ -134,7 +134,13 @@ const Contact = () => {
                   <svg className="h-5 w-5 mr-2 text-company-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  +1 (555) 123-4567
+                  +8801714066718 (WhatsApp only)
+                </p>
+                <p className="flex items-center">
+                  <svg className="h-5 w-5 mr-2 text-company-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  01717095620
                 </p>
               </div>
             </div>
