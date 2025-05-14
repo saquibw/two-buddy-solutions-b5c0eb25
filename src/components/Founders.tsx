@@ -11,7 +11,7 @@ const Founders = () => {
     },
     {
       name: "Sajid Alam Chowdhury",
-      role: "Co-Founder & Chief Data Scientist",
+      role: "Co-Founder & CEO",
       experience: "12+ years",
       expertise: "Data Science & Analytics",
       image: "/lovable-uploads/733c12b6-f9ef-4bd5-965b-b21c1e3a13a3.png",
