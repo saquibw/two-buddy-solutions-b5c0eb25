@@ -6,7 +6,7 @@ const Founders = () => {
       role: "Co-Founder & CTO",
       experience: "12+ years",
       expertise: "Software Architecture & Development",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=400&h=400",
+      image: "/lovable-uploads/af7b92db-0aa4-48a2-b4c0-df9ad812007a.png",
       bio: "With over 12 years of experience in software development and architecture, Saquibul has led numerous successful projects from concept to completion. His expertise spans cloud infrastructure, enterprise applications, and innovative SAAS solutions."
     },
     {
@@ -14,7 +14,7 @@ const Founders = () => {
       role: "Co-Founder & Chief Data Scientist",
       experience: "12+ years",
       expertise: "Data Science & Analytics",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?fit=crop&w=400&h=400",
+      image: "/lovable-uploads/733c12b6-f9ef-4bd5-965b-b21c1e3a13a3.png",
       bio: "Sajid brings 12+ years of expertise in data science, machine learning, and advanced analytics. His background in transforming complex data into actionable insights has helped businesses across multiple industries optimize operations and drive growth."
     }
   ];
