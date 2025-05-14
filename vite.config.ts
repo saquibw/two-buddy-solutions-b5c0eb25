@@ -19,4 +19,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  base: '/two-buddy-solutions-b5c0eb25/', // This should match your GitHub repository path
 }));
