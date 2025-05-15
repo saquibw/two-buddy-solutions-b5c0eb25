@@ -21,6 +21,11 @@ const Navbar = () => {
     };
   }, []);
 
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -51,7 +56,11 @@ const Navbar = () => {
         </nav>
 
         <div className="hidden md:block">
-          <Button variant="default" className="bg-company-blue hover:bg-company-blue/90 text-white">
+          <Button 
+            variant="default" 
+            className="bg-company-blue hover:bg-company-blue/90 text-white"
+            onClick={scrollToContact}
+          >
             Get Started
           </Button>
         </div>
@@ -108,7 +117,11 @@ const Navbar = () => {
             >
               Contact
             </a>
-            <Button variant="default" className="bg-company-blue hover:bg-company-blue/90 text-white w-full">
+            <Button 
+              variant="default" 
+              className="bg-company-blue hover:bg-company-blue/90 text-white w-full"
+              onClick={scrollToContact}
+            >
               Get Started
             </Button>
           </div>

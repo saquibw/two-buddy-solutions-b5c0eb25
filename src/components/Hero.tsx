@@ -14,10 +14,10 @@ const Hero = () => {
               TwoBuddySolutions delivers cutting-edge SAAS and hardware solutions to transform your business operations and drive growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-company-blue hover:bg-company-blue/90 text-white">
+              <Button size="lg" className="bg-company-blue hover:bg-company-blue/90 text-white" onClick={() => document.getElementById('solutions')?.scrollIntoView({ behavior: 'smooth' })}>
                 Explore Solutions
               </Button>
-              <Button variant="outline" size="lg" className="border-company-blue text-company-blue hover:bg-company-blue/10">
+              <Button variant="outline" size="lg" className="border-company-blue text-company-blue hover:bg-company-blue/10" onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}>
                 Contact Us
               </Button>
             </div>

@@ -13,6 +13,7 @@ const Contact = () => {
     company: "",
     message: ""
   });
+  const [isGeneratingMailto, setIsGeneratingMailto] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -21,21 +22,46 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real implementation, this would send the form data to a server
-    console.log("Form submitted:", formData);
     
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      message: ""
-    });
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill out all required fields.",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Create mailto link with form data
+    const subject = encodeURIComponent("Message from TwobuddySolutions");
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\nMessage: ${formData.message}`
+    );
+    const mailtoLink = `mailto:waheed.sislam@gmail.com,sajid.aust@gmail.com?subject=${subject}&body=${body}`;
+
+    // Open the user's email client
+    setIsGeneratingMailto(true);
+    window.location.href = mailtoLink;
+
+    setTimeout(() => {
+      setIsGeneratingMailto(false);
+      
+      // Log form submission and show toast
+      console.log("Form submitted:", formData);
+      toast({
+        title: "Message Ready to Send",
+        description: "Your email client has been opened with your message. Please send the email to complete your submission.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        message: ""
+      });
+    }, 1000);
   };
 
   return (
@@ -54,7 +80,7 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block mb-2 text-sm font-medium text-company-dark">
-                  Full Name
+                  Full Name <span className="text-red-500">*</span>
                 </label>
                 <Input
                   id="name"
@@ -67,7 +93,7 @@ const Contact = () => {
               </div>
               <div>
                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-company-dark">
-                  Email Address
+                  Email Address <span className="text-red-500">*</span>
                 </label>
                 <Input
                   id="email"
@@ -93,7 +119,7 @@ const Contact = () => {
               </div>
               <div>
                 <label htmlFor="message" className="block mb-2 text-sm font-medium text-company-dark">
-                  Message
+                  Message <span className="text-red-500">*</span>
                 </label>
                 <Textarea
                   id="message"
@@ -105,9 +131,16 @@ const Contact = () => {
                   rows={4}
                 />
               </div>
-              <Button type="submit" className="w-full bg-company-blue hover:bg-company-blue/90 text-white">
-                Send Message
+              <Button 
+                type="submit" 
+                className="w-full bg-company-blue hover:bg-company-blue/90 text-white"
+                disabled={isGeneratingMailto}
+              >
+                {isGeneratingMailto ? "Opening Email Client..." : "Send Message"}
               </Button>
+              <p className="text-xs text-gray-500 text-center mt-2">
+                This will open your default email client with a pre-populated message.
+              </p>
             </form>
           </div>
 
