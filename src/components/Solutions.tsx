@@ -30,6 +30,14 @@ const Solutions = () => {
     }
   ];
 
+  const handleLearnMore = (website: string) => {
+    if (website && !website.includes("Coming soon")) {
+      // Add https:// prefix if not present
+      const url = website.startsWith('http') ? website : `https://${website}`;
+      window.open(url, '_blank');
+    }
+  };
+
   return (
     <section id="solutions" className="bg-white py-24">
       <div className="container">
@@ -69,7 +77,11 @@ const Solutions = () => {
                       </div>
                     </CardContent>
                     <CardFooter>
-                      <Button variant="outline" className="w-full border-company-blue text-company-blue hover:bg-company-blue/10">
+                      <Button 
+                        variant="outline" 
+                        className={`w-full border-company-blue text-company-blue ${solution.website && !solution.website.includes("Coming soon") ? "hover:bg-company-blue/10" : "opacity-75 cursor-default"}`}
+                        onClick={() => handleLearnMore(solution.website)}
+                      >
                         Learn More
                       </Button>
                     </CardFooter>
